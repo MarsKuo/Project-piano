@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="audioplayer" v-for="s in sounddata">
+        <label>{{s.number}}</label>
+        <audio controls="controls" v-bind:data-num="s.num">
+          <source v-bind:src="s.url" type="audio/ogg">
+        </audio>
+      </div>
+    </div>
+    <script src="./all.js"></script>
+  </body>
+</html>
