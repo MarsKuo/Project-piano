@@ -13,7 +13,7 @@
     <div id="app">
       <div class="audioplayer" v-for="s in sounddata">
         <label>{{s.number}}</label>
-        <audio controls="controls" v-bind:data-num="s.num">
+        <audio controls v-bind:data-num="s.number">
           <source v-bind:src="s.url" type="audio/ogg">
         </audio>
       </div>

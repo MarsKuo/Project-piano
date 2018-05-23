@@ -12,7 +12,7 @@ html(lang='en')
     #app
       .audioplayer(v-for='s in sounddata')
         label {{s.number}}
-        audio(controls='controls', v-bind:data-num='s.num')
+        audio(controls v-bind:data-num='s.number')
           source(v-bind:src='s.url', type='audio/ogg')
     script(src='./all.js')
 
